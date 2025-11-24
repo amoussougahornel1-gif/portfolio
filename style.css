@@ -33,7 +33,7 @@ header.sticky{
 }
 
 header .brand{
-    color: white;
+    color:white;
     font-size: 1.8em;
     font-weight: 700;
     text-transform: uppercase;
@@ -82,7 +82,7 @@ section{
 }
 
 .main .content h2{
-    color: white;
+    color: black;
     font-size: 2em;
     font-weight: 500;
 }
