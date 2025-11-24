@@ -233,25 +233,30 @@
         <h3>LinkedIn</h3>
         <span><a href="https://www.linkedin.com/in/hornel-amoussouga" target="_blank">Hornel AMOUSSOUGA</a></span>
     </div>
-</div>
-
-          </div>
+    </div>
+    </div>
           <div class="row">
             <div class="contact-form reveal">
-              <h3>Envoyer un message</h3>
-              <div class="input-box">
-                <input type="text" name="" value="" placeholder="Name">
-              </div>
-              <div class="input-box">
-                <input type="text" name="" value="" placeholder="Email">
-              </div>
-              <div class="input-box">
-                <textarea name="name" rows="8" cols="80" placeholder="Message"></textarea>
-              </div>
-              <div class="input-box">
-                <input type="submit" class="send-btn" name="" value="Send">
-              </div>
-            </div>
+               <h3>Envoyer un message</h3>
+
+               <form id="whatsappForm">
+               <div class="input-box">
+                 <input type="text" id="name" placeholder="Votre nom" required>
+               </div>
+
+               <div class="input-box">
+                <input type="email" id="email" placeholder="Votre Email" required>
+               </div>
+
+               <div class="input-box">
+                 <textarea id="message" rows="8" placeholder="Votre message" required></textarea>
+               </div>
+
+               <div class="input-box">
+                 <button type="submit" class="send-btn">Envoyer sur WhatsApp</button>
+               </div>
+               </form>
+               </div>
           </div>
         </div>
       </section>
@@ -295,22 +300,33 @@
     });
 
     // FORMULAIRE WHATSAPP
-    const whatsappForm = document.getElementById("whatsappForm");
-    if (whatsappForm) {
-        whatsappForm.addEventListener("submit", function(e) {
-            e.preventDefault(); // Empêche l'envoi classique
+  document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
+    // Récupération des valeurs du formulaire
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
 
-            const phone = "2290146208980"; // Ton numéro WhatsApp
-            const text = `Bonjour Hornel! 👋\nNom: ${name}\nEmail: ${email}\nMessage: ${message}`;
-            const whatsappURL = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
+    // Ton numéro WhatsApp (au format international sans +)
+    let phone = "2290146208980";
 
-            window.open(whatsappURL, "_blank");
-        });
-    }
+    // Message formaté
+    let text = 
+`📩 Nouveau message depuis ton portfolio !
+
+👤 Nom : ${name}
+📧 Email : ${email}
+
+💬 Message :
+${message}`;
+
+    // Génération du lien WhatsApp
+    let whatsappURL = "https://api.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(text);
+
+    // Ouverture de WhatsApp
+    window.open(whatsappURL, "_blank");
+});
 </script>
 
 </body>
