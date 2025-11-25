@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets – Hornel</title>
+    <link rel="stylesheet" href="projets.css">
+</head>
+<body>
+
+<!-- HEADER identique à index -->
+<header>
+    <a href="index.html" class="brand">Hornel</a>
+    <div class="menu-btn"></div>
+
+    <div class="navigation">
+        <a href="index.html#main">Accueil</a>
+        <a href="index.html#about">À propos</a>
+        <a href="index.html#skills">Compétences</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+</header>
+
+<section class="projects">
+    <div class="title">
+        <h2 class="section-title">Mes Projets</h2>
+        <p>Voici quelques projets que j'ai réalisés.</p>
+    </div>
+
+    <div class="project-container">
+
+        <div class="project-card">
+            <h3>Jeu interactif</h3>
+            <p>Un jeu web simple où l'utilisateur entre son nom et joue directement.</p>
+            <a href="https://github.com/amoussougahornel1-gif/Jeux" target="_blank" class="btn">Voir le projet</a>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <span class="footer-title">Hornel AMOUSSOUGA</span>
+    <p>Copyright © 2025 — Tous droits réservés.</p>
+</footer>
+
+
+    <script>
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+        const navigationItems = document.querySelectorAll(".navigation a");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+        navigationItems.forEach((navItem) => {
+            navItem.addEventListener("click", () => {
+                menuBtn.classList.remove("active");
+                navigation.classList.remove("active");
+            });
+        });
+    </script>
+
+</body>
+</html>
