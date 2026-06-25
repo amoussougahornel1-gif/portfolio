@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets – Hornel</title>
+    <link rel="stylesheet" href="projets.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="brand">Hornel</a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+        <a href="index.html#main">Accueil</a>
+        <a href="index.html#about">À propos</a>
+        <a href="index.html#skills">Compétences</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+</header>
+
+<section class="projects">
+    <div class="title">
+        <h2 class="section-title">Mes Projets</h2>
+        <p>Voici les projets que j'ai réalisés durant ma formation et en autonomie.</p>
+    </div>
+
+    <div class="project-container">
+
+        <!-- PROJET VEDETTE -->
+        <div class="project-card featured">
+            <div class="project-badge">⭐ Projet de fin de Licence</div>
+            <h3>🌾 Plateforme de gestion des coopératives agricoles</h3>
+            <p>Conception et réalisation complète d'une plateforme web de gestion pour coopératives agricoles. Modélisation UML (diagrammes de classes, séquences, cas d'utilisation), développement full-stack et base de données relationnelle. Soutenu le 15 juin 2026.</p>
+            <div class="project-tags">
+                <span class="tag">UML</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Laravel(PHP)</span>
+            </div>
+            <div class="project-mention">🏆 Mention Très Bien </div>
+        </div>
+
+        <!-- PROJET JEU -->
+        <div class="project-card">
+            <h3>🎮 Jeu interactif web</h3>
+            <p>Un jeu web où l'utilisateur entre son nom et joue directement. Logique JavaScript avancée avec interaction utilisateur en temps réel.</p>
+            <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML/CSS</span>
+            </div>
+            <a href="https://amoussougahornel1-gif.github.io/Jeux/" target="_blank" class="btn">Voir le projet</a>
+        </div>
+
+        <!-- E-COMMERCE -->
+        <div class="project-card">
+            <h3>🛒 Site E-commerce</h3>
+            <p>Application web e-commerce avec gestion des produits, panier dynamique, accès sécurisé par authentification et base de données MySQL.</p>
+            <div class="project-tags">
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+            </div>
+            <span class="btn btn-disabled">En amélioration</span>
+        </div>
+
+        <!-- CLASICO -->
+        <div class="project-card">
+            <h3>⚽ Clasico des Fans Béninois 2026</h3>
+            <p>Plateforme web événementielle pour un match sportif. Design immersif avec vidéo en arrière-plan, programme, billetterie, galerie média et contact. Totalement responsive.</p>
+            <div class="project-tags">
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Responsive</span>
+            </div>
+            <span class="btn btn-disabled">Lien expiré</span>
+        </div>
+
+        <!-- CV EN LIGNE -->
+        <div class="project-card">
+            <h3>📄 CV en ligne</h3>
+            <p>CV web interactif présentant mon parcours, mes compétences et mes projets. Déployé sur GitHub Pages.</p>
+            <div class="project-tags">
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">GitHub Pages</span>
+            </div>
+            <a href="https://amoussougahornel1-gif.github.io/cv/" target="_blank" class="btn">Voir le CV</a>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <span class="footer-title">Hornel AMOUSSOUGA</span>
+    <p>Copyright © 2026 — Tous droits réservés.</p>
+</footer>
+
+<script>
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+    const navigationItems = document.querySelectorAll(".navigation a");
+
+    menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+    });
+
+    navigationItems.forEach((navItem) => {
+        navItem.addEventListener("click", () => {
+            menuBtn.classList.remove("active");
+            navigation.classList.remove("active");
+        });
+    });
+</script>
+
+</body>
+</html>
