@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes Projets – Hornel</title>
-    <link rel="stylesheet" href="projets.css">
+    <link rel="stylesheet" href="projets.css?v=5">
+    <link rel="stylesheet" href="snake.css?v=5">
 </head>
 <body>
 
@@ -38,7 +39,50 @@
                 <span class="tag">MySQL</span>
                 <span class="tag">Laravel(PHP)</span>
             </div>
-            <div class="project-mention">🏆 Mention Très Bien </div>
+        </div>
+
+        <!-- ARNELLE INSTIT -->
+        <div class="project-card wide">
+            <div class="project-badge team-badge">👥 Projet en équipe · En ligne</div>
+            <h3>💅 Arnelle Institut</h3>
+            <p>Plateforme web d'un institut de soins esthétiques, réalisée en équipe en sprints : site vitrine avec services et tarifs, espace client (rendez-vous, paiements) et back-office pour le personnel. API REST Spring Boot, front-end Angular, authentification sécurisée avec Keycloak.</p>
+            <div class="project-tags">
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Angular</span>
+                <span class="tag">Keycloak</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Travail en équipe</span>
+            </div>
+            <a href="https://arnelle-institut.com" target="_blank" rel="noopener" class="btn">Voir le site</a>
+        </div>
+
+        <!-- VERDEUR ACADÉMIE -->
+        <div class="project-card wide">
+            <div class="project-badge progress-badge">🚧 En cours de développement</div>
+            <h3>⚽ Verdeur Académie Sport</h3>
+            <p>Plateforme de gestion d'une académie de football : joueurs, séances et présences, évaluations et suivi de la progression, tableaux de bord par rôle. API REST Laravel documentée (OpenAPI), front-end Angular Material, authentification par jetons et journal d'audit, avec une attention particulière à la sécurité des données de mineurs.</p>
+            <div class="project-tags">
+                <span class="tag">Laravel</span>
+                <span class="tag">Angular</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">API REST</span>
+                <span class="tag">Sanctum</span>
+            </div>
+            <span class="btn btn-disabled">Bientôt en ligne</span>
+        </div>
+
+        <!-- CODEMONEY MICROFINANCE -->
+        <div class="project-card">
+            <div class="project-badge private-badge">🔒 Application privée</div>
+            <h3>💰 CodeMoney — Microfinance</h3>
+            <p>Application de gestion de prêts pour un agent prêteur : clients, prêts et échéanciers, paiements, pénalités de retard, tableau de bord, génération de contrats et de reçus en PDF, archivage automatique des prêts soldés.</p>
+            <div class="project-tags">
+                <span class="tag">Laravel</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Bootstrap</span>
+                <span class="tag">PDF</span>
+            </div>
+            <span class="btn btn-disabled">Non publié</span>
         </div>
 
         <!-- PROJET JEU -->
@@ -85,7 +129,10 @@
                 <span class="tag">HTML/CSS</span>
                 <span class="tag">GitHub Pages</span>
             </div>
-            <a href="https://amoussougahornel1-gif.github.io/cv/" target="_blank" class="btn">Voir le CV</a>
+            <div class="btn-row">
+                <a href="https://amoussougahornel1-gif.github.io/cv/" target="_blank" class="btn">Voir le CV</a>
+                <a href="cv.pdf" download="CV_Hornel_AMOUSSOUGA.pdf" class="btn btn-outline">⬇ Télécharger le CV</a>
+            </div>
         </div>
 
     </div>
@@ -114,5 +161,6 @@
     });
 </script>
 
+<script src="snake.js?v=5"></script>
 </body>
 </html>

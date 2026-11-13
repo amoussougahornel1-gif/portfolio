@@ -271,3 +271,36 @@ header .navigation a:hover { color: #000016; }
     .section-title { font-size: 1.8em; }
     .project-card.featured { grid-column: auto; }
 }
+
+/* Badge projet en équipe */
+.team-badge {
+    background: rgba(58,108,244,0.1);
+    color: #3a6cf4;
+    border-color: rgba(58,108,244,0.3);
+}
+
+/* Boutons CV */
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn-outline { background: transparent; color: #3a6cf4; border: 2px solid #3a6cf4; padding: 8px 18px; }
+.btn-outline:hover { background: #3a6cf4; color: #fff; }
+
+/* ── Mise en page plus propre des cartes ── */
+.project-card p { text-align: left; flex: 1; }
+.project-card > .btn,
+.project-card > .btn-disabled,
+.project-card > .btn-row { margin-top: auto; }
+.project-card h3 { line-height: 1.35; }
+
+/* Arnelle Institut : carte large, comme un projet phare */
+.project-card.wide {
+    grid-column: span 2;
+    border-top-color: #3a6cf4;
+    background: linear-gradient(135deg, #eef3ff, #fff);
+}
+@media (max-width: 700px) {
+    .project-card.wide { grid-column: auto; }
+}
+
+/* Badges d'état */
+.progress-badge { background: rgba(245,158,11,0.12); color: #b45309; border-color: rgba(245,158,11,0.35); }
+.private-badge  { background: rgba(100,116,139,0.12); color: #475569; border-color: rgba(100,116,139,0.3); }

@@ -548,3 +548,6 @@ section { padding: 100px 200px; }
 
     .contact-form { padding: 30px 24px; }
 }
+
+/* ── DOCKER ── */
+.skills .content .col-right .bar .docker::before { width: 60%; background: linear-gradient(90deg, #1d63ed, #2496ed); }
